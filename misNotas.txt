@@ -1,0 +1,89 @@
++Notas-pagina.html
+	// meta charset = agregar simbolos
+
+	// Cuando las etiquetas no tienen contenido entonces se cierran en el mismo con />
+
+	// EL CODIGO SE EJECUTA DE ARRIBA HACIA ABAJO DE FORMA SECUENCIAL
+
+	// La programacion es exacta en su sintaxis
+
+	// Html = HyperTextMarkupLanguage, es un lenguaje de programacion en donde esta todo de una pagina web
+
+	// Css = Declaracion de estilo de diseño                             Todo esto se encasca en html
+
+	// Js = Lenguaje de programacion 
+
+	// lo que no se ve y el codigo = head
+	
+    // lo que se ve en la pagina (contenido de la pagina) = body
+
+	// Es Java scriot = <script>
+
+	// <strong> negrilla </strong>
+
+	// <etiqueta>contenido</etiqueta> se abre y cierra al mismo nivel
+
+	// El orden de los valores altera el resultado
+
+	// Hay distintos tipos de variables: de texto, de numero, de valores textuales, de valores numericos y cuando se unen es una concatenacion con +
+
+	// let = crea variables que seran "" o 1 (de texto o numerica)
+
+	// Cuando no separo una operacion el codigo se ejecuta de izquierda a derecha y no de viceversa y sin resolver primero lo de los parentesis
+
+	//Una funcion es un bloque de codigo que tiene un objetivo y esta se invoca con parentesis() y adentro son los parametros el cual es el valor para que la funcion haga algo
+
+	//"string" cadena de texto
++Fin Notas-pagina.html
++Notas-juego.html
+    //src = "buscar en cierto directorio/ cierto archivo"
+
+    // el . = indica nuestro directorio actual
+
+    // Tener en cuenta que elementos que se ponen posteriores al <script> aun no existen por que suceden despues
+
+    // atributo defer = a decirle al html que se carga el codigo.js cuando la pagina termine de cargar
++Fin Notas-juego.html
++Notas-codigo.js
+    //Declarar una funcion como si fuera una variable (hacer una nueva funcion) con function sin (=) xd
+    
+    // Si tienes que copiar y pegar lo mismo eso merece ser una funcion
+    
+    // funcion en minuscula y parametros entre ()
+    
+    // Primero se declaran y luego se usan las funciones
+    
+    //IMPORTANTE return es una instruccion que sirve para que la variable se defina porque manda la informacion hacia la nueva variable o que una funcion ejecute cierta funcion que se especifica en su interior
+    
+    // Algoritmo de aleatoriedad de numeros entre los rangos (1 - 3)
+    
+    // 1 es piedra, 2 es papel y 3 es tijera
+    
+    // Doctype es compatibilidad con navegadores viejos
+    
+    // Las instrucciones son terminos que modifican el flujo del codigo
+    
+    // while = haga un ciclo mientras sea verdadera y importante
+    
+    //alert("Elegiste " + jugador)
+    
+    // (==) = Comparar
+    
+    // (=) = Asignacion
+    
+    // if = si
+    
+    // else = si no 
+    
+    // Comentario de desarollador
+    
+    // else if = si no, entonces
+    
+    //COMBATE//
+    
+    //&& = y, para que dos cosas se comparen o hagan al mismo tiempo
+    
+    // Math.floor = funcion que quita decimales a cualquier numero 
+    
+    // Math.random () = Da un numero aleatorio entre en 0 y el 1
++Fin Notas-codigo.js
