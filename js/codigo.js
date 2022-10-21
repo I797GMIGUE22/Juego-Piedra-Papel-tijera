@@ -1,3 +1,4 @@
+//ALEATORIEDAD//
 function aleatorio (min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }         
@@ -5,30 +6,32 @@ function election(jugada){
     let j = ""
     let r = ""
     if (jugada == 1){
-        j = "TU: 🤘  "    
+        j = "TU: 🤘     "    
     } else if (jugada == 2) {
-        j = "TU: 🧻  "   
+        j = "TU: 🧻     "   
     } else if (jugada == 3) {
-        j = "TU: ✂️  "
+        j = "TU: ✂️     "
     } else {
-        j = "🤖🤖ERROR🤖🤖  "
+        j = "🤖🤖ERROR🤖🤖     "
     }     
     return j
 }
 function electionpc(jugada){
     let p
     if (jugada == 1) {
-        p = "  🤘 :PC"            
+        p = "     🤘 :PC"            
     } else if (jugada == 2){
-        p = "  🧻 :PC"
+        p = "     🧻 :PC"
     } else if (jugada == 3){
-        p = "  ✂️ :PC"
+        p = "     ✂️ :PC"
     }    
     return p;
 }
 function ringring(o){    
-    return a = alert(election(jugador) + o + electionpc(pc))
+    return alert(election(jugador) + o + electionpc(pc))
 }
+
+//COMBATE//
 
 let jugador = 0
 let pc = 0
