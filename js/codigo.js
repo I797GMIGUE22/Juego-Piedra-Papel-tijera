@@ -3,32 +3,31 @@ function aleatorio (min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
 }         
 function election(jugada){
-    let j = ""
-    let r = ""
+    let jugadaJugador = ""
     if (jugada == 1){
-        j = "TU: 🤘     "    
+        jugadaJugador = "TU: 🤘     "    
     } else if (jugada == 2) {
-        j = "TU: 🧻     "   
+        jugadaJugador = "TU: 🧻     "   
     } else if (jugada == 3) {
-        j = "TU: ✂️     "
+        jugadaJugador = "TU: ✂️     "
     } else {
-        j = "🤖🤖ERROR🤖🤖     "
+        jugadaJugador = "🤖🤖ERROR🤖🤖     "
     }     
-    return j
+    return jugadaJugador
 }
 function electionpc(jugada){
-    let p
+    let jugadaPc
     if (jugada == 1) {
-        p = "     🤘 :PC"            
+        jugadaPc = "     🤘 :PC"            
     } else if (jugada == 2){
-        p = "     🧻 :PC"
+        jugadaPc = "     🧻 :PC"
     } else if (jugada == 3){
-        p = "     ✂️ :PC"
+        jugadaPc = "     ✂️ :PC"
     }    
-    return p;
+    return jugadaPc;
 }
-function ringring(o){    
-    return alert(election(jugador) + o + electionpc(pc))
+function ringring(resultado){    
+    return alert(election(jugador) + resultado + electionpc(pc))
 }
 
 //COMBATE//
@@ -42,13 +41,13 @@ while (triunfos <3 && perdidas < 3){
     pc = aleatorio (1, 3)
     jugador = prompt("Elige: 1 = 🤘 | 2 = 🧻 | 3 = ✂️")
     if(pc == jugador){
-        ringring(o ="--EMPATE--")
+        ringring("--EMPATE--")
     } else if((jugador == 1 && pc == 3) || (jugador == 2 && pc == 1) || (jugador == 3 && pc == 2)){
-        ringring(o ="--GANASTE--")
+        ringring("--GANASTE--")
         triunfos = triunfos + 1
     } else {
-        ringring(o ="--PERDISTE--")
+        ringring("--PERDISTE--")
         perdidas = perdidas + 1
     }    
 }
-alert("Ganaste " + triunfos + " Perdiste " + perdidas + " veces.")                                                        
+alert("Ganaste: " + triunfos + " Perdiste: " + perdidas)                                                        
