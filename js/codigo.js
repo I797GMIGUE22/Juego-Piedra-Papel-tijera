@@ -1,53 +1,66 @@
+//VARIABLES//
+
+const botonPiedra = document.getElementById("boton-piedra");
+const botonPapel = document.getElementById("boton-papel");
+const botonTijera = document.getElementById("boton-tijera");
+
+let botones = [];
+let jugador = 0;
+let ataqueJ
+let pc = 0;
+let triunfos = 0;
+let perdidas = 0;
+
+//BASES DE DATOS//
+
+let dialogosJugador = ["🤘", "🧻", "✂️"];
+
+let dialogosPc = ["🤘", "🧻", "✂️",];
+
 //ALEATORIEDAD//
-function aleatorio (min, max) {
-    return Math.floor(Math.random() * (max - min + 1) + min)
-}         
-function election(jugada){
-    let jugadaJugador = ""
-    if (jugada == 1){
-        jugadaJugador = "TU: 🤘     "    
-    } else if (jugada == 2) {
-        jugadaJugador = "TU: 🧻     "   
-    } else if (jugada == 3) {
-        jugadaJugador = "TU: ✂️     "
-    } else {
-        jugadaJugador = "🤖🤖ERROR🤖🤖     "
-    }     
-    return jugadaJugador
-}
-function electionpc(jugada){
-    let jugadaPc
-    if (jugada == 1) {
-        jugadaPc = "     🤘 :PC"            
-    } else if (jugada == 2){
-        jugadaPc = "     🧻 :PC"
-    } else if (jugada == 3){
-        jugadaPc = "     ✂️ :PC"
-    }    
-    return jugadaPc;
-}
-function ringring(resultado){    
-    return alert(election(jugador) + resultado + electionpc(pc))
+function aleatorio(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) + min);
 }
 
-//COMBATE//
+function inicio() {
+  botones = document.querySelectorAll(".boton");
+  botones.forEach((boton) => {
+    boton.addEventListener("click", (info) => {ataqueJ = info.target.name; consol(ataqueJ)});
+  });
+}
 
-let jugador = 0
-let pc = 0
-let triunfos = 0
-let perdidas = 0
+function election(jugada) {
+  let jugadaJugador;
+  jugadaJugador = "TU: " + dialogosJugador[jugada] + "     ";
+  return jugadaJugador;
+}
+function electionpc(jugada) {
+  let jugadaPc;
+  jugadaPc = "     " + dialogosPc[jugada] + " :PC";
+  return jugadaPc;
+}
+function ringring(resultado) {
+  alert(election(ataqueJ) + resultado + electionpc(pc));
+  final()
+}
 
-while (triunfos <3 && perdidas < 3){
-    pc = aleatorio (1, 3)
-    jugador = prompt("Elige: 1 = 🤘 | 2 = 🧻 | 3 = ✂️")
-    if(pc == jugador){
-        ringring("--EMPATE--")
-    } else if((jugador == 1 && pc == 3) || (jugador == 2 && pc == 1) || (jugador == 3 && pc == 2)){
+function consol (ataque){
+    pc = aleatorio (0, 2)
+    if(pc == ataque){
+       ringring("--EMPATE--")
+    } else if((ataque == 0 && pc == 2) || (ataque == 1 && pc == 0) || (ataque == 2 && pc == 1)){
         ringring("--GANASTE--")
         triunfos = triunfos + 1
     } else {
         ringring("--PERDISTE--")
         perdidas = perdidas + 1
-    }    
+    }
 }
-alert("Ganaste: " + triunfos + " Perdiste: " + perdidas)                                                        
+
+function final(){
+  if ((triunfos == 3)||(perdidas == 3)) {
+    alert("Ganaste: " + triunfos + " Perdiste: " + perdidas);
+}
+}
+
+window.addEventListener("load", inicio);

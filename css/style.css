@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css2?family=Acme&family=Caesar+Dressing&family=Chakra+Petch:ital,wght@0,500;1,400&display=swap");
+body {
+  display: flex;
+  font-family: "Caesar Dressing", cursive;
+  align-items: center;
+  flex-direction: column;
+  height: 575px;
+  margin: 20px;
+  background-color: #9b1414;
+}
+h1 {
+  font-size: 50px;
+}
+#eleccion {
+  display: flex;
+  margin: 20px 0px;
+  width: 887px;
+  justify-content: center;
+  gap: 122px;
+  height: 50px;
+}
+.boton + label:hover {
+  background-color: #ffc56d;
+}
+label:active {
+  border: 2px solid black;
+}
+
+div label {
+  font-family: "Acme", sans-serif;
+  font-size: 25px;
+  background-color: antiquewhite;
+  padding: 5px;
+  border-radius: 20px;
+  align-self: center;
+  border: 2px solid transparent;
+}
+
+div input {
+  display: none;
+}
